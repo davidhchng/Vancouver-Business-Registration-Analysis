@@ -121,4 +121,11 @@ total 193136
 
 ''' 
 
-df1 = df.filter([])
+
+# Cleaning the data:
+
+# Drop observations with a null geom value
+
+df1 = df[df['Geom'].notnull()]
+
+print(df1.shape)
