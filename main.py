@@ -1,7 +1,7 @@
 
-# Important necessary libaries:
-
 import pandas as pd
+
+
 from pandas._libs.tslibs.offsets import BusinessMixin
 
 import matplotlib.pyplot as plt
@@ -266,25 +266,33 @@ df1[['lat', 'long']] = df1[['lat', 'long']].astype(float)
 
 #print(df1.info())
 
-# Great. Now we can make a scatterplot with longitude and latitude, to see where business locations are distributed. 
+# Great. Now we can make a scatterplot with longitude and latitude, to see where business locations are distributed.
 
 
+# Use seaborn for a nicer scatterplot by LocalArea (if available)
+import seaborn as sns
 
+if 'LocalArea' not in df1.columns:
+    df1['LocalArea'] = 'Unknown'
 
+unique_local_areas = df1['LocalArea'].nunique()
 
-#plt.scatter(df1['long'], df1['lat'])
+plt.figure(figsize=(12, 9))
+sns.scatterplot(
+    data=df1,
+    x='long',
+    y='lat',
+    hue='LocalArea',
+    s=10,
+    alpha=0.5,
+        palette=sns.color_palette("tab20", n_colors=min(20, unique_local_areas)),
+        legend=False
+)
 
-#plt.show()
-
-
-plt.scatter(df1['long'], df1['lat'])
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.title('Business locations by LocalArea')
+plt.tight_layout()
 plt.show()
-
-
-
-
-
-
-
 
 
