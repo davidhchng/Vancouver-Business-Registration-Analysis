@@ -3,12 +3,6 @@
 
 import pandas as pd
 
-import seaborn as sns
-
-from pandas._libs.tslibs.offsets import BusinessMixin
-
-import matplotlib.pyplot as plt
-
 import numpy as np
 
 import plotly.express as px
@@ -29,6 +23,10 @@ df1 = df1[df1['LocalArea'] != 'UBC'].copy()
 df1 = df1[df1['geo_point_2d'].notnull()].copy()
 
 df1[['lat', 'long']] = df1['geo_point_2d'].str.split(',', expand = True)
+
+df1[['lat', 'long']] = df1[['lat', 'long']].astype(float)
+
+type_counts = df_filtered_1['BusinessType'].value_counts()
 
 drop_types = [
     'Information Communication Technology',
@@ -99,12 +97,6 @@ df_filtered = df_filtered_1[df_filtered_1['BusinessType'].isin(big_types)].copy(
 
 df_issued = df_filtered[df_filtered['Status'] == "Issued"].copy()
 
-  global df_filtered, df_issued
-    df_filtered = df
-    df_issued = df_filtered[df_filtered["Status"] == "Issued"].copy()
-
-    return df_filtered, df_issued
-
 
 def concentration_score(business_type, local_area):
 
@@ -124,7 +116,7 @@ def concentration_score(business_type, local_area):
 
     return location_prop / total_prop
 
-print(concentration_score('Restaurant', 'Downtown'))
+#print(concentration_score('Restaurant', 'Downtown'))
 
 gone_statuses = ['Gone Out of Business', 'Inactive']
 
@@ -153,7 +145,7 @@ def relative_closure_risk(business_type, local_area):
     return relative_risk
 
 
-print(relative_closure_risk('Restaurant', 'West Point Grey'))
+#print(relative_closure_risk('Restaurant', 'West Point Grey'))
 
 df_issued['IssuedDate_dt'] = pd.to_datetime(df_issued['IssuedDate'], errors = 'coerce', utc = True)
 
@@ -300,7 +292,7 @@ def market_interpretation(business_type, local_area):
     }
 
 
-print(market_interpretation("Restaurant", "Sunset"))
+#print(market_interpretation("Restaurant", "Sunset"))
 
 
 def plot_map(business_type, local_area):
@@ -311,14 +303,13 @@ def plot_map(business_type, local_area):
     df_plot = df_plot[df_plot['BusinessType'] == business_type].copy()
 
 
-    df_plot['Status Group'] = np.where(df_plot['Status'] == 'Issued',
-                                       'Issued',
-                                       np.where(
-                                           df_plot['Status'].isin(['Gone Out of Business' 'Inactive']),
-                                           'Exit',
-                                           'Closure/Inactive'
+     df_plot['Status Group'] = np.where(df_plot['Status'] == 'Issued',
+                                        'Issued',
+                                    np.where(df_plot['Status'].isin(['Gone Out of Business', 'Inactive']),
+                                             'Closure/Inactive',
+                                             'Other'
+                                            )
                                        )
-                                      )
 
 
     
@@ -375,5 +366,5 @@ def plot_map(business_type, local_area):
     return fig
 
 
-fig = plot_map("Restaurant", "Downtown")
-fig.show()
+#fig = plot_map("Restaurant", "Downtown")
+#fig.show()
