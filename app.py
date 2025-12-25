@@ -62,8 +62,8 @@ if st.button("Run"):
 
     c5, c6 = st.columns([2, 1])
     with c5:
-        rec = result["recency_momentum_score"]
-        st.metric("Recency momentum", "N/A" if rec is None else f"{rec:.2f}")
+        rec = result["recency_score"]
+        st.metric("Recency Score", "N/A" if rec is None else f"{rec:.2f}")
     with c6:
         st.markdown(render_level("Typical"), unsafe_allow_html=True)  # always neutral
 
