@@ -50,15 +50,13 @@ st.markdown(
 
 st.markdown(
     """
-    <p style="font-size:1.05rem; color:#ffffff; line-height:1.6; max-width:900px;">
     This tool I've built uses City of Vancouver business registration data to help interpret
     local market conditions for different business types across neighbourhoods.
     By combining measures of <strong>concentration</strong>, <strong>closure risk</strong>,
     and <strong>recency of openings</strong>, it infers some sort of narrative
     about competition, stability, and momentum in a given area.
     </p>
-    """,
-    unsafe_allow_html=True
+    """
 )
 
 
