@@ -314,7 +314,7 @@ def market_interpretation(business_type, local_area):
         "closure_risk_score": risk_score,
         "closure_risk_level": risk_level,
 
-        "recency_core": recency_score,
+        "recency_score": recency_score,
         "recency_level": recency_level,
 
         "interpretation_title": title,
