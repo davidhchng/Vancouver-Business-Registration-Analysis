@@ -375,8 +375,8 @@ def plot_map(business_type, local_area):
     )
 
     fig.update_layout(
-        height = 2000,
-        width = 2800,
+        height = 1700,
+        width = 2500,
         xaxis_title = "Longitude",
         yaxis_title = "Latitude",
         legend = dict(

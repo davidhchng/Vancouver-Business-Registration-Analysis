@@ -34,9 +34,32 @@ def render_level(level):
 
 st.title("Vancouver Business Registrations: Inferences for Market Interpretation")
 
+st.markdown(
+    "<h3 style='margin-top:0.2em; margin-bottom:0.5em;'>David Chang</h3>",
+    unsafe_allow_html=True
+)
+
+
+
+st.markdown(
+    """
+    <p style="font-size:1.05rem; color:#444; line-height:1.6; max-width:900px;">
+    This tool I've built uses City of Vancouver business registration data to help interpret
+    local market conditions for different business types across neighbourhoods.
+    By combining measures of <strong>concentration</strong>, <strong>closure risk</strong>,
+    and <strong>recency of openings</strong>, it infers some sort of narrative
+    about competition, stability, and momentum in a given area.
+    </p>
+    """,
+    unsafe_allow_html=True
+)
+
+
 st.image("https://images.pexels.com/photos/29072584/pexels-photo-29072584.jpeg",
             caption="Vancouver Skyline (Credit: Luke Lawreszuk)",
             use_container_width= True)
+
+
 
 
 
