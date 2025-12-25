@@ -6,9 +6,7 @@ import logic
 
 st.set_page_config(layout="wide")
 
-st.set_page_config(
-    layout="centered"
-)
+
 
 
 
