@@ -255,8 +255,8 @@ def market_interpretation(business_type, local_area):
     if risk_level == "High":
         title = "High Risk"
         summary = (
-            "Businesses of this type close or become inactive here at an unusually high rate."
-                   "Even if demand appears strong, survivability is poor, making entry risky."
+            "Businesses of this type close or become inactive here at an unusually high rate. "
+            "Even if demand appears strong, survivability is poor, making entry risky."
         )
 
     elif conc_level == "Low" and recency_level == "Low":
@@ -314,7 +314,7 @@ def market_interpretation(business_type, local_area):
         "closure_risk_score": risk_score,
         "closure_risk_level": risk_level,
 
-        "recency_momentum_score": recency_score,
+        "recency_core": recency_score,
         "recency_level": recency_level,
 
         "interpretation_title": title,
@@ -376,7 +376,7 @@ def plot_map(business_type, local_area):
 
     fig.update_layout(
         height = 2500,
-        width = 3000,
+        width = 3500,
         xaxis_title = "Longitude",
         yaxis_title = "Latitude",
         legend = dict(
@@ -387,7 +387,7 @@ def plot_map(business_type, local_area):
             x = 0.5,
             title_text = "" # remove default combined title
         ),
-        margin = dict(l = 40, r = 40, t = 80, b = 100)
+        margin = dict(l = 40, r = 40, t = 80, b = 40)
     )
             
                       
