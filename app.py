@@ -1,7 +1,11 @@
 import streamlit as st
 
-import logic
+# import logic
 
+
+st.write("hello")
+
+'''
 st.title("Vancouver Business Market Signal")
 
 # Dropdown menu
@@ -27,4 +31,4 @@ if st.button("Run"):
 
     st.plotly_chart(fig, use_container_width = True)
 
-    
+ '''   
