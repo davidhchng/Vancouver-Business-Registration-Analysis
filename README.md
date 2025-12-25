@@ -1,5 +1,9 @@
 # Vancouver Business Registrations: Inferences for Market Interpretation
 
+![Vancouver Skyline](https://images.pexels.com/photos/29072584/pexels-photo-29072584.jpeg)
+Vancouver Skyline (Credit: Luke Lawreszuk)
+
+
 ## Introduction:
 
 The City of Vancouver has a rich and diverse business landscape, and something that represents this is a dataset in their Open Data Portal. Said dataset holds records of the recent business registries from 2024 onwards. It is rather large, with over 130,000 registrations. I took this size as an opportunity to make inferences on the market as a whole. These inferences are based on factors such as the concentration, recency, and closures of the registrations of a certain business type and location. As with anything involving data, it was imperative to use some discretion to create the metrics that analyzed these factors. This analysis, and further cleaning and manipulation of the data, is further outlined in the .ipynb file, which can in this repository. It contains the majority of analysis and decision making.
@@ -45,7 +49,7 @@ For this score, a lower score (1 is the baseline) would mean that businesses of 
 The recency score captures how recently new businesses of a given type have been opening in a neighbourhood, compared to the citywide trend.
 Rather than counting all openings, this metric focuses on recent momentum.
 
-- For a selected business type in a neighbourhood:
+For a selected business type in a neighbourhood:
 
 - To compute, first identify the most recent one-seventh (≈14%) of issued business registrations.
 
