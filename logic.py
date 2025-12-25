@@ -375,14 +375,14 @@ def plot_map(business_type, local_area):
     )
 
     fig.update_layout(
-        height = 2500,
-        width = 3500,
+        height = 2000,
+        width = 2800,
         xaxis_title = "Longitude",
         yaxis_title = "Latitude",
         legend = dict(
             orientation = "h",
             yanchor = "top",
-            y = -0.22,
+            y = -0.05,
             xanchor = "center",
             x = 0.5,
             title_text = "" # remove default combined title
