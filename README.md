@@ -1,3 +1,7 @@
+Here is the link to the app that utilizes what was built here:
+
+https://vancouver-business-registration-analysis-qjrojtgcgkd8zmqlzrtsd.streamlit.app/#concentration
+
 # Vancouver Business Registrations: Inferences for Market Interpretation
 
 ![Vancouver Skyline](https://images.pexels.com/photos/29072584/pexels-photo-29072584.jpeg)
