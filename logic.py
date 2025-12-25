@@ -358,7 +358,7 @@ def plot_map(business_type, local_area):
         y = "lat",
         color = "Group",
         symbol = "Status Group",
-        opacity = 0.7,
+        opacity = 0.6,
         hover_data = ["BusinessType", "LocalArea"],
         title = f"{business_type} in {local_area} vs Vancouver",
         color_discrete_map = {
@@ -374,7 +374,7 @@ def plot_map(business_type, local_area):
       
     )
 
-    fig.update_traces(marker=dict(size=9)) # for size tweaks
+    fig.update_traces(marker=dict(size=8)) # for size tweaks
 
     fig.update_layout(
         height = 1200,
