@@ -12,8 +12,6 @@ import math
 
 df = pd.read_csv("business-licences.csv", sep=";", low_memory = False)
 
-# Let's start by merging Arbutus-Ridge values with Arbutus Ridge:
-
 df1 = df.copy()
 
 df1['LocalArea'] = df1['LocalArea'].replace({'Arbutus Ridge': 'Arbutus-Ridge'})
