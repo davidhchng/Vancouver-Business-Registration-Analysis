@@ -1,6 +1,6 @@
 Here is the link to the app that utilizes what was built here:
 
-https://vancouver-business-registration-analysis-qjrojtgcgkd8zmqlzrtsd.streamlit.app/#concentration
+https://vercel.com/davidhchngs-projects/vancouver-business-registration-analysis
 
 # Vancouver Business Registrations: Inferences for Market Interpretation
 
