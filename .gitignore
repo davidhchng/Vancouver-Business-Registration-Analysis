@@ -76,3 +76,9 @@ dmypy.json
 .cache/
 .upm/
 .local/
+
+node_modules
+.next
+out
+.env
+.env.local

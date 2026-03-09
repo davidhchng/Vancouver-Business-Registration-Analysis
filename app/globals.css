@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #020617;
+  color: #f9fafb;
+}
+
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4.5rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header h3 {
+  margin-top: 0.25rem;
+  font-size: 1.2rem;
+  color: #e5e7eb;
+}
+
+.header p {
+  max-width: 720px;
+  margin: 0.75rem auto 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+.hero {
+  margin-top: 2rem;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.65);
+}
+
+.hero-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 2.5rem 0 2rem;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+.controls select {
+  margin-top: 0.25rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #f9fafb;
+}
+
+.controls button {
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: #0f172a;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.controls button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.results {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  background: radial-gradient(circle at top, #111827, #020617 55%);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.8);
+  text-align: left;
+}
+
+.scores-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) auto minmax(0, 1.2fr);
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.metric-value {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.how-link {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #020617;
+  color: #e5e7eb;
+  text-decoration: none;
+  border: 1px solid #334155;
+  font-size: 0.85rem;
+}
+
+.map-section {
+  margin-top: 2rem;
+}
+
+.about {
+  margin-top: 3rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.metric-explainer {
+  margin-top: 1.5rem;
+}
+
+.error {
+  color: #b91c1c;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .score-row {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+}
+

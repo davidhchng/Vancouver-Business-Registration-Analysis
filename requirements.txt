@@ -13,5 +13,4 @@ pytz==2025.2
 seaborn==0.13.2
 six==1.17.0
 tzdata==2025.2
-streamlit 
 plotly
