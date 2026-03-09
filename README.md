@@ -1,6 +1,6 @@
 Here is the link to the app that utilizes what was built here:
 
-https://vercel.com/davidhchngs-projects/vancouver-business-registration-analysis
+https://vancouver-business-registration-ana.vercel.app/
 
 # Vancouver Business Registrations: Inferences for Market Interpretation
 
