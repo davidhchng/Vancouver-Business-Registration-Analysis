@@ -43,14 +43,14 @@ export default function PlotMap({
     <Plot
       data={data as any}
       layout={{
-        title: `${businessType} in ${localArea} vs Vancouver`,
+        title: { text: `${businessType} in ${localArea} vs Vancouver` },
         xaxis: {
-          title: "Longitude",
+          title: { text: "Longitude" },
           color: "#e5e7eb",
           gridcolor: "#1f2937",
         },
         yaxis: {
-          title: "Latitude",
+          title: { text: "Latitude" },
           color: "#e5e7eb",
           gridcolor: "#1f2937",
         },
